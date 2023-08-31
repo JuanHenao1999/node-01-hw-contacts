@@ -31,7 +31,7 @@ function removeContact(contactId) {
 }
 
 function addContact(name, email, phone) {
-  return listContacts().the((list) => {
+  return listContacts().then((list) => {
     const addUserCnt = { id: uuidv4(), name, email, phone };
     list.push(addUserCnt);
     return fs
